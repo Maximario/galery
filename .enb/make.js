@@ -10,8 +10,7 @@ var techs = {
         stylus: require('enb-stylus/techs/stylus'),
 
         // js
-        browserJs: require('enb-diverse-js/techs/browser-js'),
-        prependYm: require('enb-modules/techs/prepend-modules'),
+        browserJs: require('enb-js/techs/browser-js'),
 
         // bemtree
         // bemtree: require('enb-bemxjst/techs/bemtree'),
@@ -28,6 +27,7 @@ var techs = {
         { path: 'libs/bem-components/desktop.blocks', check: false },
         { path: 'libs/bem-components/design/common.blocks', check: false },
         { path: 'libs/bem-components/design/desktop.blocks', check: false },
+		{ path: 'libs/j/blocks', check: false },
         'common.blocks',
         'desktop.blocks'
     ];
@@ -83,16 +83,15 @@ module.exports = function(config) {
             }],
 
             // js
-            [techs.browserJs],
+            [techs.browserJs, { includeYM: true }],
             [techs.fileMerge, {
-                target: '?.pre.js',
-                sources: ['?.browser.bemhtml.js', '?.browser.js']
+                target: '?.js',
+                sources: ['?.browser.js', '?.browser.bemhtml.js']
             }],
-            [techs.prependYm, { source: '?.pre.js' }],
 
             // borschik
-            [techs.borschik, { sourceTarget: '?.js', destTarget: '?.min.js', freeze: true, minify: isProd }],
-            [techs.borschik, { sourceTarget: '?.css', destTarget: '?.min.css', tech: 'cleancss', freeze: true, minify: isProd }]
+            [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
+            [techs.borschik, { source: '?.css', target: '?.min.css', tech: 'cleancss', minify: isProd }]
         ]);
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
