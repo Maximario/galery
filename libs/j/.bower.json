@@ -1,0 +1,12 @@
+{
+  "name": "j",
+  "homepage": "https://github.com/innabelaya/j",
+  "_release": "695d479fbd",
+  "_resolution": {
+    "type": "commit",
+    "commit": "695d479fbdd7c97e61bd89953ef095e2e567e70e"
+  },
+  "_source": "git://github.com/innabelaya/j.git",
+  "_target": "695d479fbdd7c97e61bd89953ef095e2e567e70e",
+  "_originalSource": "git://github.com/innabelaya/j.git"
+}

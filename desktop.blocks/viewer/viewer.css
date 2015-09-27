@@ -1,0 +1,33 @@
+.viewer
+{
+	position: absolute;
+	width: 800px;
+	height: 400px;
+}
+
+.viewer__left, .viewer__right
+{
+	position: absolute;
+	top: 50px;
+	height: 100%;
+	width: 100px;
+}
+
+.viewer__left
+{
+	left: 0;
+}
+
+.viewer__right
+{
+	right: 0;
+}
+ 
+.viewer__center
+{
+	position: absolute;
+	top: 0;
+	left: 100px;
+	height: 100%;
+	width: 600px;
+}
