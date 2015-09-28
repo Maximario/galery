@@ -1,0 +1,44 @@
+block('album')(
+ 
+    tag()('ul'),
+ 
+    content()(function() {
+        return this.ctx.album.map(function(item){
+            return [
+                {
+                    elem: 'item',
+                    mods: { cur: item.cur ? 'yes' : undefined },
+					content: [
+                        {
+                            elem: 'title',
+                            content: item.title
+                        },
+                        {
+                            elem: 'image',
+                            url: item.image
+                        }
+                    ]
+                },
+                ' '
+            ];
+ 
+        });
+ 
+    }),
+  
+    elem('item')(
+        tag()('li')
+    ),
+ 
+    elem('title')(
+        tag()('h3')
+    ),
+ 
+    elem('image')(
+        tag()('img'),
+ 
+        attrs()(function() {
+            return { src: this.ctx.url };    
+        })
+    )
+);

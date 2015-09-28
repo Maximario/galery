@@ -1,0 +1,11 @@
+.album
+{
+    text-justify: distribute-all-lines;
+}
+ 
+.album__item
+{
+    display: inline;
+ 
+    zoom: 1;
+}

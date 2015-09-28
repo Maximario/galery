@@ -1,0 +1,8 @@
+.albumround
+{
+	position: absolute;
+	overflow: hidden;
+	top: 400px;
+	width: 800px;
+	height: 110px;
+}
