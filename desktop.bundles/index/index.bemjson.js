@@ -14,6 +14,7 @@
             content: [
 				{
 					elem: 'left',
+					js: true,
 					content: [
 						{
 							block: 'image',
@@ -58,6 +59,7 @@
 			content: [
 				{
 					block: 'album',
+					js: true,
 					album: [
 						{
 							title: '001',
