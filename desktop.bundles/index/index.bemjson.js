@@ -56,6 +56,7 @@
 		},
 		{
 			block: 'albumround',
+			js: false,
 			content: [
 				{
 					block: 'album',
