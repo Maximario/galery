@@ -1,4 +1,4 @@
-modules.define('album', ['i-bem__dom', 'jquery'], function(provide, BEMDOM, $) {
+/*modules.define('album', ['i-bem__dom', 'jquery'], function(provide, BEMDOM, $) {
 
 provide(BEMDOM.decl(this.name, {
     onSetMod: {
@@ -25,4 +25,4 @@ provide(BEMDOM.decl(this.name, {
 	
 }));
 
-});
+});*/

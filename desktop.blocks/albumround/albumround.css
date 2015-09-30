@@ -1,8 +1,7 @@
 .albumround
 {
 	position: absolute;
-	overflow-x: scroll;
-	overflow-y: hidden;
+	overflow: hidden;
 	top: 400px;
 	width: 800px;
 	height: 110px;

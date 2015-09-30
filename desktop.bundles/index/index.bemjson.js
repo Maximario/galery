@@ -56,11 +56,11 @@
 		},
 		{
 			block: 'albumround',
-			js: false,
+			js: true,
 			content: [
 				{
 					block: 'album',
-					js: true,
+					js: false,
 					album: [
 						{
 							title: '001',

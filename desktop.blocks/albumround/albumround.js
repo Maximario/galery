@@ -1,14 +1,16 @@
-modules.define('albumround', ['i-bem__dom', 'jquery'], function(provide, BEMDOM, $) {
+modules.define('albumround', ['i-bem__dom'], function(provide, BEMDOM) {
 
 provide(BEMDOM.decl(this.name, {
     onSetMod: {
 		'js': {
             'inited': function() {
-                this.bindTo('click', function(e) {
-                    this.setMod('size', 'big');
-					this.findBlockInside('album', block).setMod('clicked', 'yes');
-					
-					//this.animate({left: _scroll + "px"});
+				var albumBlock = this.findBlockInside('album'),
+				$albumBlock = albumBlock.domElem;
+                this.bindTo('mousewheel DOMMouseScroll', function(e) {
+					e.preventDefault();
+					console.log("Wheel " + e.originalEvent.wheelDelta);
+					console.log("Detail " + e.originalEvent.detail);
+					console.log("deltaY " + e.originalEvent.deltaY);
 				});
             }
         }
