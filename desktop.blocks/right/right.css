@@ -1,0 +1,10 @@
+.right
+{
+	position: absolute;
+	background-color: #ccc;
+	display: none;
+	top: 50px;
+	height: 100px;
+	width: 100px;
+	right: 0;
+}

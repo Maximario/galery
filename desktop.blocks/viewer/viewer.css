@@ -1,28 +1,12 @@
 .viewer
 {
 	position: absolute;
+	overflow: hidden;
+	top: 10px;
 	width: 800px;
 	height: 400px;
 }
 
-.viewer__left, .viewer__right
-{
-	position: absolute;
-	top: 50px;
-	height: 100%;
-	width: 100px;
-}
-
-.viewer__left
-{
-	left: 0;
-}
-
-.viewer__right
-{
-	right: 0;
-}
- 
 .viewer__center
 {
 	position: absolute;

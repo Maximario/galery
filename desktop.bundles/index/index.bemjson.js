@@ -11,23 +11,21 @@
     content: [
         {
             block: 'viewer',
+			js: true,
             content: [
 				{
-					elem: 'left',
+					block: 'left',
 					js: true,
 					content: [
 						{
 							block: 'image',
 							attrs: {src: '/desktop.blocks/viewer/left.png'}
-						},
-						{
-							block: 'test',
-							content: 'left'
 						}
 					]
 				},
 				{
-					elem: 'center',
+					block: 'center',
+					js: true,
 					content: [
 						{
 							block: 'image',
@@ -40,15 +38,12 @@
 					]
 				},
 				{
-					elem: 'right',
+					block: 'right',
+					js: true,
 					content: [
 						{
 							block: 'image',
 							attrs: {src: '/desktop.blocks/viewer/right.png'}
-						},
-						{
-							block: 'test',
-							content: 'right'
 						}
 					]
 				}
@@ -60,75 +55,75 @@
 			content: [
 				{
 					block: 'album',
-					js: false,
+					js: true,
 					album: [
 						{
-							title: '001',
+							num: 1,
 							image: '/images/001.jpg',
 							cur: true
 						},
 						{
-							title: '002',
+							num: 2,
 							image: '/images/002.jpg'
 						},
 						{
-							title: '003',
+							num: 3,
 							image: '/images/003.jpg'
 						},
 						{
-							title: '004',
+							num: 4,
 							image: '/images/004.jpg'
 						},
 						{
-							title: '005',
+							num: 5,
 							image: '/images/005.jpg'
 						},
 						{
-							title: '006',
+							num: 6,
 							image: '/images/006.jpg'
 						},
 						{
-							title: '007',
+							num: 7,
 							image: '/images/007.jpg'
 						},
 						{
-							title: '008',
+							num: 8,
 							image: '/images/008.jpg'
 						},
 						{
-							title: '009',
+							num: 9,
 							image: '/images/009.jpg'
 						},
 						{
-							title: '010',
+							num: 10,
 							image: '/images/010.jpg'
 						},
 						{
-							title: '011',
+							num: 11,
 							image: '/images/011.jpg'
 						},
 						{
-							title: '012',
+							num: 12,
 							image: '/images/012.jpg'
 						},
 						{
-							title: '013',
+							num: 13,
 							image: '/images/013.jpg'
 						},
 						{
-							title: '014',
+							num: 14,
 							image: '/images/014.jpg'
 						},
 						{
-							title: '015',
+							num: 15,
 							image: '/images/015.jpg'
 						},
 						{
-							title: '016',
+							num: 16,
 							image: '/images/016.jpg'
 						},
 						{
-							title: '017',
+							num: 17,
 							image: '/images/017.jpg'
 						}
 					]

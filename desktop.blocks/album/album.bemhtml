@@ -1,6 +1,6 @@
 block('album')(
  
-    tag()('ul'),
+    tag()('div'),
  
     content()(function() {
         return this.ctx.album.map(function(item){
@@ -10,8 +10,8 @@ block('album')(
                     mods: { cur: item.cur ? 'yes' : undefined },
 					content: [
                         {
-                            elem: 'title',
-                            content: item.title
+                            elem: 'num',
+                            content: item.num
                         },
                         {
                             elem: 'image',
@@ -27,10 +27,10 @@ block('album')(
     }),
   
     elem('item')(
-        tag()('li')
+        tag()('div')
     ),
  
-    elem('title')(
+    elem('num')(
         tag()('h3')
     ),
  
