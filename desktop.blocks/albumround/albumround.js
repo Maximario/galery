@@ -12,11 +12,9 @@ provide(BEMDOM.decl(this.name, {
 					rightlimit = parseInt(this.domElem.css('width').slice(0, -2)) - parseInt($albumBlock.css('width').slice(0, -2));
 					if ((leftint <= 0) || (leftint >= rightlimit)) {
 						var delta = (e.originalEvent.wheelDelta ? e.originalEvent.wheelDelta/120*70 : e.originalEvent.detail/(-3)*70) || false;
-						console.log("delta " + delta);
 						leftint += delta;
 						leftint = (leftint > 0 ? 0 : leftint);
 						leftint = (leftint < rightlimit ? rightlimit : leftint);
-						console.log("leftint " + leftint);
 						$albumBlock.animate({left: leftint}, 30);
 					}
 				});
