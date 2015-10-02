@@ -9,6 +9,14 @@ provide(BEMDOM.decl(this.name, {
 					this.setMod($(e.currentTarget), 'cur', 'yes');
 					this.emit('click');
 				});
+				this.findBlockOutside('albumround').findBlockOutside('page__inner').findBlockInside('viewer').findBlockInside('left').on(
+					'click',
+					this._moveLeft,
+					this);
+				this.findBlockOutside('albumround').findBlockOutside('page__inner').findBlockInside('viewer').findBlockInside('right').on(
+					'click',
+					this._moveRight,
+					this);
 			}
 		}
 	},
@@ -21,8 +29,16 @@ provide(BEMDOM.decl(this.name, {
 				}
 			}
 		}
+	},
+	_moveLeft: function() {
+		this._prevItem = this.findElem('item', 'cur', 'yes').prev();
+		this.setMod(this._prevItem, 'cur', 'yes');
+	},
+	_moveRight: function() {
+		this._nextItem = this.findElem('item', 'cur', 'yes').next();
+		this.setMod(this._nextItem, 'cur', 'yes');
 	}
-	
+
 }));
 
 });

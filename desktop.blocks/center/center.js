@@ -9,6 +9,14 @@ provide(BEMDOM.decl(this.name, {
 					'click',
 					this._getCurImage,
 					this);
+				this.findBlockOutside('viewer').findBlockInside('left').on(
+					'click',
+					this._getCurImage,
+					this);
+				this.findBlockOutside('viewer').findBlockInside('right').on(
+					'click',
+					this._getCurImage,
+					this);
 			}
 		}
     },

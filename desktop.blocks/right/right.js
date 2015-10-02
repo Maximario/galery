@@ -10,6 +10,10 @@ provide(BEMDOM.decl(this.name, {
 				this.bindTo('mouseout', function() {
 					this.domElem.css({backgroundColor: '#ccc'});
 				});
+				this.bindTo('click', function(e) {
+					console.log('Right Click');
+					this.emit('click');
+				});
 			}
         }
     }
