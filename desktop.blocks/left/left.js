@@ -1,4 +1,4 @@
-modules.define('left', ['i-bem__dom'], function(provide, BEMDOM) {
+modules.define('left', ['i-bem__dom', 'jquery'], function(provide, BEMDOM, $) {
 
 provide(BEMDOM.decl(this.name, {
     onSetMod: {
@@ -11,8 +11,9 @@ provide(BEMDOM.decl(this.name, {
 					this.domElem.css({backgroundColor: '#ccc'});
 				});
 			}
-        }
+		}
     }
+    
 }));
 
 });
