@@ -1,0 +1,13 @@
+.center
+{
+	position: absolute;
+	top: 0;
+	left: 100px;
+	height: 100%;
+	width: 600px;
+}
+
+.center .image
+{
+	width: 600px;
+}

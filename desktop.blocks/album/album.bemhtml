@@ -10,10 +10,6 @@ block('album')(
                     mods: { cur: item.cur ? 'yes' : undefined },
 					content: [
                         {
-                            elem: 'num',
-                            content: item.num
-                        },
-                        {
                             elem: 'image',
                             url: item.image
                         }
@@ -28,10 +24,6 @@ block('album')(
   
     elem('item')(
         tag()('div')
-    ),
- 
-    elem('num')(
-        tag()('h3')
     ),
  
     elem('image')(

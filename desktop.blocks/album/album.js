@@ -7,6 +7,7 @@ provide(BEMDOM.decl(this.name, {
                 this._cur = this.findElem('item', 'cur', 'yes');
 				this.bindTo('item', 'click', function(e) {
 					this.setMod($(e.currentTarget), 'cur', 'yes');
+					this.emit('click');
 				});
 			}
 		}
