@@ -55,7 +55,6 @@
 					album: [
 						{
 							image: '/images/001.jpg',
-							cur: true
 						},
 						{
 							image: '/images/002.jpg'

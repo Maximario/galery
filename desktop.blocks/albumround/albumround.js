@@ -6,6 +6,12 @@ provide(BEMDOM.decl(this.name, {
             'inited': function() {
 				var albumBlock = this.findBlockInside('album'),
 				$albumBlock = albumBlock.domElem;
+                this.bindTo('mouseover', function() {
+					$albumBlock.css({display: 'inline'});
+				});
+				this.bindTo('mouseout', function() {
+					$albumBlock.css({display: 'none'});
+				});
                 this.bindTo('mousewheel DOMMouseScroll', function(e) {
 					e.preventDefault();
 					var leftint = parseInt($albumBlock.css('left').slice(0, -2));
@@ -15,7 +21,7 @@ provide(BEMDOM.decl(this.name, {
 						leftint += delta;
 						leftint = (leftint > 0 ? 0 : leftint);
 						leftint = (leftint < rightlimit ? rightlimit : leftint);
-						$albumBlock.animate({left: leftint}, 30);
+						$albumBlock.css({left: leftint});
 					}
 				});
             }
